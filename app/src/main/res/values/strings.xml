@@ -1,0 +1,31 @@
+<resources>
+
+    <string name="app_name">RetrofitDemo</string>
+    <string name="placeholder">Placeholder</string>
+    <string name="placeholder_a">Placeholder A</string>
+    <string name="placeholder_b">Placeholder B</string>
+    <string name="placeholder_c">Placeholder C</string>
+    <string name="search_hint">Search Hint</string>
+
+    <string name="lorem_ipsum">
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+          et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+          Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
+          consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+          sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+          no sea takimata sanctus est Lorem ipsum dolor sit amet.\n www.google.de
+    </string>
+    <string name="custom_toast">Custom Toast</string>
+    <string name="action_search">Action Search</string>
+    <string name="next">Next</string>
+    <string name="skip">Skip</string>
+    <string name="slide_1_title">Slide 1 Title</string>
+    <string name="slide_1_description">Slide 1 Description</string>
+    <string name="slide_2_title">Slide 2 Title</string>
+    <string name="slide_2_description">Slide 2 Description</string>
+    <string name="slide_3_title">Slide 3 Title</string>
+    <string name="slide_3_description">Slide 3 Description</string>
+    <string name="start">Start</string>
+    <string name="search">Search</string>
+
+</resources>

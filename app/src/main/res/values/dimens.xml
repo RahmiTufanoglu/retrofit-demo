@@ -1,0 +1,37 @@
+<resources>
+
+    <dimen name="activity_horizontal_margin_small">8dp</dimen>
+    <dimen name="activity_vertical_margin_small">8dp</dimen>
+
+    <dimen name="activity_horizontal_margin_normal">16dp</dimen>
+    <dimen name="activity_vertical_margin_normal">16dp</dimen>
+
+    <dimen name="activity_horizontal_margin_large">32dp</dimen>
+    <dimen name="activity_vertical_margin_large">32dp</dimen>
+
+    <dimen name="activity_horizontal_margin_xlarge">42dp</dimen>
+    <dimen name="activity_vertical_margin_xlarge">42dp</dimen>
+
+    <dimen name="status_bar_height">24dp</dimen>
+    <dimen name="drawerlayout_padding">16dp</dimen>
+
+    <dimen name="appbar_padding_top">8dp</dimen>
+
+    <dimen name="detail_backdrop_height">256dp</dimen>
+    <dimen name="card_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="list_item_avatar_size">40dp</dimen>
+
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="dots_height">30dp</dimen>
+    <dimen name="dots_margin_bottom">20dp</dimen>
+    <dimen name="img_width_height">150dp</dimen>
+    <dimen name="slide_title">30sp</dimen>
+    <dimen name="slide_desc">16sp</dimen>
+    <dimen name="desc_padding">40dp</dimen>
+
+    <dimen name="progress_dialog_size">56dp</dimen>
+
+</resources>

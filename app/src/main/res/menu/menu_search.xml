@@ -1,0 +1,21 @@
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/menu_search"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+    <item
+        android:id="@+id/action_search"
+        android:icon="@mipmap/ic_launcher"
+        android:title="@string/action_search"
+        app:actionViewClass="android.support.v7.widget.SearchView"
+        app:showAsAction="always|collapseActionView"/>
+
+    <item
+        android:id="@+id/menu_item_custom_toast"
+        android:orderInCategory="1"
+        android:title="@string/custom_toast"
+        android:visible="true"
+        app:showAsAction="never"/>
+
+</menu>
