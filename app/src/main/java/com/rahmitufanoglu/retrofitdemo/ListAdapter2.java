@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.rahmitufanoglu.retrofitdemo.model.GitHubRepo;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,16 +22,16 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 
-public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ListViewHolder> {
+public class ListAdapter2 extends RecyclerView.Adapter<ListAdapter2.ListViewHolder> {
 
     private List<GitHubRepo> mGitHubRepoList;
 
-    public ListAdapter(List<GitHubRepo> gitHubRepoList) {
+    public ListAdapter2(List<GitHubRepo> gitHubRepoList) {
         mGitHubRepoList = gitHubRepoList;
     }
 
     @Override
-    public ListAdapter.ListViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public ListAdapter2.ListViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_item, parent, false);
         return new ListViewHolder(view);
     }
@@ -41,8 +42,9 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ListViewHolder
 
         Glide.with(holder.civAvatar.getContext())
                 .load(gitHubRepoList.getOwner().getAvatarUrl())
+                .diskCacheStrategy(DiskCacheStrategy.NONE)
+                .skipMemoryCache(true)
                 .fitCenter()
-                .diskCacheStrategy(DiskCacheStrategy.ALL)
                 .dontAnimate()
                 .into(holder.civAvatar);
 

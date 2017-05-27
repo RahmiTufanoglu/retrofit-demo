@@ -6,7 +6,7 @@
     android:id="@+id/activity_detail"
     style="@style/Match"
     android:fitsSystemWindows="true"
-    tools:context=".SampleDetailActivity">
+    tools:context=".SampleDetailActivity2">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/app_bar"

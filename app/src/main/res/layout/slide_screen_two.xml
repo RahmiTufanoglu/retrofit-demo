@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    style="@style/Match"
     android:background="@color/bg_slider_screen2"
     android:gravity="center"
     android:orientation="vertical">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/Wrap"
         android:layout_marginBottom="@dimen/slide_title"
         android:text="@string/slide_2_title"
         android:textColor="@android:color/white"
@@ -23,8 +21,7 @@
         android:src="@mipmap/ic_launcher"/>
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/Wrap"
         android:layout_marginTop="20dp"
         android:paddingLeft="@dimen/desc_padding"
         android:paddingRight="@dimen/desc_padding"

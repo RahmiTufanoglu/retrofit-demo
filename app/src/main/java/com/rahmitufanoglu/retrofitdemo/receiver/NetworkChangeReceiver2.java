@@ -1,17 +1,18 @@
-package com.rahmitufanoglu.retrofitdemo;
+package com.rahmitufanoglu.retrofitdemo.receiver;
 
 
 import android.app.Activity;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.support.v7.app.AlertDialog;
 import android.widget.Toast;
 
+import com.rahmitufanoglu.retrofitdemo.SplashActivity2;
+import com.rahmitufanoglu.retrofitdemo.util.NetworkUtil;
 
-public class NetworkChangeReceiver extends BroadcastReceiver {
+
+public class NetworkChangeReceiver2 extends BroadcastReceiver {
 
     private Context mContext;
 
@@ -19,15 +20,16 @@ public class NetworkChangeReceiver extends BroadcastReceiver {
     public void onReceive(Context context, Intent intent) {
         mContext = context;
 
-        ConnectivityManager connectivityManager = (ConnectivityManager) mContext.getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
-        boolean isConnected = networkInfo != null && networkInfo.isConnected();
+        boolean isConnected = NetworkUtil.isNetworkConnected(context);
+        final Toast toast;
         if (isConnected) {
-            Toast.makeText(mContext, "Internet connected", Toast.LENGTH_LONG).show();
+            toast = Toast.makeText(mContext, "Internet connected", Toast.LENGTH_LONG);
+            toast.show();
             mContext.startActivity(intent);
             ((Activity) mContext).finish();
         } else {
-            Toast.makeText(mContext, "Internet connection lost", Toast.LENGTH_LONG).show();
+            toast = Toast.makeText(mContext, "Internet connection lost", Toast.LENGTH_LONG);
+            toast.show();
             checkInternet();
         }
     }
@@ -43,10 +45,11 @@ public class NetworkChangeReceiver extends BroadcastReceiver {
                 //.setPositiveButton("YES", (dialog, id) -> wifi.setWifiEnabled(true))
                 .setPositiveButton("YES", (dialog, id) -> {
                     ((Activity) mContext).finish();
-                    Intent splashIntent = new Intent(mContext, SplashActivity.class);
+                    Intent splashIntent = new Intent(mContext, SplashActivity2.class);
                     mContext.startActivity(splashIntent);
                 })
                 .create()
                 .show();
     }
+
 }

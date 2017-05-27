@@ -8,8 +8,10 @@ import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -25,7 +27,7 @@ import butterknife.OnClick;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 
-public class SampleDetailActivity extends AppCompatActivity {
+public class SampleDetailActivity2 extends AppCompatActivity {
 
     @BindView(R.id.collapsing_toolbar) CollapsingToolbarLayout collapsingToolbarLayout;
     @BindView(R.id.iv_collapsing) ImageView ivCollapsing;
@@ -57,8 +59,9 @@ public class SampleDetailActivity extends AppCompatActivity {
 
         Glide.with(this)
                 .load(collapsingImage)
+                .diskCacheStrategy(DiskCacheStrategy.NONE)
+                .skipMemoryCache(true)
                 .fitCenter()
-                .diskCacheStrategy(DiskCacheStrategy.ALL)
                 .dontAnimate()
                 .into(ivCollapsing);
 
@@ -86,7 +89,14 @@ public class SampleDetailActivity extends AppCompatActivity {
 
     @OnClick(R.id.fab_detail)
     public void setOnClick(View view) {
-        Toast defaultToast = Toast.makeText(this, "This is a default Toast", Toast.LENGTH_SHORT);
-        defaultToast.show();
+        showCustomToast();
+    }
+
+    public void showCustomToast() {
+        Toast customToast = new Toast(this);
+        customToast.setView(getLayoutInflater().inflate(R.layout.toast_custom, (ViewGroup) findViewById(R.id.toast_custom)));
+        customToast.setGravity(Gravity.CENTER | Gravity.BOTTOM, 0, 32);
+        customToast.setDuration(Toast.LENGTH_SHORT);
+        customToast.show();
     }
 }

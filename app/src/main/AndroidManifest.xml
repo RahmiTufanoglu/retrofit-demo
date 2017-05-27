@@ -26,11 +26,19 @@
         <activity
             android:name=".SliderActivity"
             android:theme="@style/AppTheme.Base">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
         </activity>
 
         <activity
             android:name=".MainActivity"
+            android:launchMode="singleTop"
             android:theme="@style/AppTheme.Base">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
             <meta-data
                 android:name="android.app.searchable"
                 android:resource="@xml/searchable"/>
@@ -39,15 +47,10 @@
         <activity
             android:name=".SampleDetailActivity"
             android:theme="@style/TransparentStatusBar">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
         </activity>
     </application>
 
 </manifest>
-
-    <!--
-            <receiver android:name=".NetworkChangeReceiver">
-                <intent-filter>
-                    <action android:name="android.net.wifi.WIFI_STATE_CHANGED"/>
-                </intent-filter>
-            </receiver>
-    -->

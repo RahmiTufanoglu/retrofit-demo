@@ -5,7 +5,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 
 
-public class PreferenceManager {
+public class MyPreferenceManager2 {
 
     private Context mContext;
     private SharedPreferences mSharedPreferences;
@@ -13,7 +13,7 @@ public class PreferenceManager {
     private static final String PREFERENCE_NAME = "intro_slider";
     private static final String IS_FIRST_TIME_LAUNCH = "is:_first_time_launch";
 
-    public PreferenceManager(Context context) {
+    public MyPreferenceManager2(Context context) {
         mContext = context;
         mSharedPreferences = mContext.getSharedPreferences(PREFERENCE_NAME, PRIVATE_MODE);
         //mSharedPreferencesEditor = mSharedPreferences.edit();
@@ -28,4 +28,5 @@ public class PreferenceManager {
     public boolean isFirstTimeLaunch() {
         return mSharedPreferences.getBoolean(IS_FIRST_TIME_LAUNCH, true);
     }
+
 }

@@ -24,13 +24,13 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 
-public class SliderActivity extends AppCompatActivity implements ViewPager.OnPageChangeListener {
+public class SliderActivity2 extends AppCompatActivity implements ViewPager.OnPageChangeListener {
 
     @BindView(R.id.view_pager) ViewPager viewPager;
     @BindView(R.id.layoutDots) LinearLayout dotsLayout;
     @BindView(R.id.btn_skip) Button btnSkip;
     @BindView(R.id.btn_next) Button btnNext;
-    private PreferenceManager mPreferenceManager;
+    private MyPreferenceManager2 mMyPreferenceManager2;
     private int[] mLayouts;
     private long mBackPressedTime = 0;
 
@@ -56,16 +56,16 @@ public class SliderActivity extends AppCompatActivity implements ViewPager.OnPag
     }
 
     private void checkFirstTimeLaunch() {
-        mPreferenceManager = new PreferenceManager(this);
-        if (!mPreferenceManager.isFirstTimeLaunch()) {
+        mMyPreferenceManager2 = new MyPreferenceManager2(this);
+        if (!mMyPreferenceManager2.isFirstTimeLaunch()) {
             launchHomeScreen();
             finish();
         }
     }
 
     private void launchHomeScreen() {
-        mPreferenceManager.setFirstTimeLaunch(false);
-        Intent mainIntent = new Intent(this, MainActivity.class);
+        mMyPreferenceManager2.setFirstTimeLaunch(false);
+        Intent mainIntent = new Intent(this, MainActivity2.class);
         startActivity(mainIntent);
         finish();
     }

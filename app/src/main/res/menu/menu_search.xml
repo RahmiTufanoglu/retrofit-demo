@@ -6,15 +6,15 @@
 
     <item
         android:id="@+id/action_search"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/ic_search_white_24dp"
         android:title="@string/action_search"
         app:actionViewClass="android.support.v7.widget.SearchView"
         app:showAsAction="always|collapseActionView"/>
 
     <item
-        android:id="@+id/menu_item_custom_toast"
+        android:id="@+id/menu_replace_fragment"
         android:orderInCategory="1"
-        android:title="@string/custom_toast"
+        android:title="@string/replace_fragment"
         android:visible="true"
         app:showAsAction="never"/>
 

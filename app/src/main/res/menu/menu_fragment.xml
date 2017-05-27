@@ -1,13 +1,13 @@
 <menu
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/menu_main"
+    android:id="@+id/menu_fragment"
     android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
     <item
-        android:id="@+id/menu_item_custom_toast"
+        android:id="@+id/menu_do_someting"
         android:orderInCategory="1"
-        android:title="@string/custom_toast"
+        android:title="@string/do_something"
         android:visible="true"
         app:showAsAction="never"/>
 
